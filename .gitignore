@@ -1,0 +1,25 @@
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+venv/
+.env/
+
+# IDE/编辑器文件
+.vscode/
+.idea/
+*.swp
+
+# 日志文件
+*.log
+logs/
+
+# 构建目录
+build/
+dist/
+*.egg-info/
+
+# 环境配置文件
+*.env
+config.yaml
