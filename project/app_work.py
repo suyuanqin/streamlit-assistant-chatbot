@@ -21,7 +21,9 @@ st.session_state['available_tools'] = {
 }
 
 # 1. 正确加载 JSON 文件
-with open('tools_description.json', 'r') as f:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+tools_description_path = os.path.join(current_dir, 'tools_description.json')
+with open(tools_description_path, 'r') as f:
     tools_description = json.load(f)
 tool_lists = ['get_current_temperature','send_email']
 tool_selected = st.multiselect("Select Tools", tool_lists,key="tool_list_selected")
