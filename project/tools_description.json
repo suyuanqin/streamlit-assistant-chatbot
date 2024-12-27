@@ -1,0 +1,51 @@
+{
+    "tool_description": {
+        "get_current_temperature": {
+            "type": "function",
+            "function": {
+                "name": "get_current_temperature",
+                "description": "You are a weather api call tool. You can get the current temperature based on the user's input.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "coordinates": {    
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "type": "number"
+                                },
+                                "minItems": 2,
+                                "maxItems": 2
+                            },
+                            "description": "Array of [latitude, longitude] pairs, e.g., [[33, 44]]."
+                        },
+                        "specific_time": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The specific time to get the temperature.e.g., '2024-12-25 01:00:00+00:00'"
+                        }
+                    },
+                    "required": ["coordinates","specific_time"]
+                }
+            }
+        },
+        "send_email": {
+            "type": "function",
+            "function": {
+                "name": "send_email",
+                "description": "You are a email tool. You can get the email addrss based on the user's name.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "user name"
+                        }
+                    },
+                    "required": ["name"]
+                }
+            }
+        }
+    }
+}
