@@ -1,2 +1,5 @@
 # streamlit-assistant-chatbot
-You can edit your function call lists and create your own assistant chatbot to chat with it!
+
+#用streamlit 搭建的调用 openai assistant api的项目
+-cd project
+-streamlit run app_work.py
